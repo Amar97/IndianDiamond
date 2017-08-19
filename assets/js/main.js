@@ -1,65 +1,71 @@
 /*
-	Tactile by Pixelarity
-	pixelarity.com | hello@pixelarity.com
-	License: pixelarity.com/license
-*/
+ Tactile by Pixelarity
+ pixelarity.com | hello@pixelarity.com
+ License: pixelarity.com/license
+ */
 
-(function($) {
+(function ($) {
 
-	skel.breakpoints({
-		xlarge:	'(max-width: 1680px)',
-		large:	'(max-width: 1280px)',
-		medium:	'(max-width: 980px)',
-		small:	'(max-width: 736px)',
-		xsmall:	'(max-width: 480px)'
-	});
+    skel.breakpoints({
+        xlarge: '(max-width: 1680px)',
+        large: '(max-width: 1280px)',
+        medium: '(max-width: 980px)',
+        small: '(max-width: 736px)',
+        xsmall: '(max-width: 480px)'
+    });
 
-	$(function() {
+    $(function () {
 
-		var	$window = $(window),
-			$body = $('body'),
-			$header = $('#header');
+        // //imports assets/js/main.js
+        // $("#navbar").load("../../imports/navbar.html");
+        // $("#footer").load("../../imports/footer.html");
 
-		// Disable animations/transitions until the page has loaded.
-			$body.addClass('is-loading');
+        var $window = $(window),
+            $body = $('body'),
+            $header = $('#header');
 
-			$window.on('load', function() {
-				window.setTimeout(function() {
-					$body.removeClass('is-loading');
-				}, 100);
-			});
+        // Disable animations/transitions until the page has loaded.
+        $body.addClass('is-loading');
 
-		// Fix: Placeholder polyfill.
-			$('form').placeholder();
+        $window.on('load', function () {
+            window.setTimeout(function () {
+                $body.removeClass('is-loading');
+            }, 100);
+        });
 
-		// Prioritize "important" elements on medium.
-			skel.on('+medium -medium', function() {
-				$.prioritize(
-					'.important\\28 medium\\29',
-					skel.breakpoint('medium').active
-				);
-			});
+        // Fix: Placeholder polyfill.
+        $('form').placeholder();
 
-		// Scrolly.
-			$('.scrolly')
-				.scrolly({
-					speed: 1000,
-					offset: $header.outerHeight()
-				});
+        // Prioritize "important" elements on medium.
+        skel.on('+medium -medium', function () {
+            $.prioritize(
+                '.important\\28 medium\\29',
+                skel.breakpoint('medium').active
+            );
+        });
 
-		// Menu.
-			$('#menu')
-				.append('<a href="#menu" class="close"></a>')
-				.appendTo($body)
-				.panel({
-					delay: 500,
-					hideOnClick: true,
-					hideOnSwipe: true,
-					resetScroll: true,
-					resetForms: true,
-					side: 'right'
-				});
+        // Scrolly.
+        $('.scrolly')
+            .scrolly({
+                speed: 1000,
+                offset: $header.outerHeight()
+            });
 
-	});
+
+
+        // Menu.
+        $('#menu')
+            .append('<a href="#menu" class="close"></a>')
+            .appendTo($body)
+            .panel({
+                delay: 500,
+                hideOnClick: true,
+                hideOnSwipe: true,
+                resetScroll: true,
+                resetForms: true,
+                side: 'right'
+            });
+
+    });
 
 })(jQuery);

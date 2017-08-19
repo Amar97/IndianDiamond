@@ -16,7 +16,6 @@
     <!--[if lte IE 8]>
     <link rel="stylesheet" href="assets/css/ie8.css"/><![endif]-->
     <meta name="title" content="Indian Diamond"/>
-    <meta name="description" content="Indian Diamond is the place to be for raw virgin hair!"/>
     <meta name="description" content="Indian Diamond is dé plek om al uw kunsthaar te kopen!"/>
     <meta name="keywords"
           content="pruiken, wigs, frontals, closures, synthetisch, weaves, curls, hair, indian, raw, virgin, diamond, tirumala, donor, haar"/>
@@ -29,14 +28,15 @@
 </head>
 <body>
 
-<div id="header"></div>
+<!--<div id="n"></div>-->
+<div id="navbar"></div>
 
 <!-- Banner -->
 <section id="banner">
     <div class="inner">
         <img src="images/logo/IndianDiamondGroter.png" style="width: 20em; padding-bottom: 3em"/>
         <ul class="actions vertical">
-            <li><a href="#" class="button special big">Naar webshop</a></li>
+            <li><a href="store.html" class="button special big">Naar webshop</a></li>
             <li><a href="#one" class="button big scrolly">Meer informatie</a></li>
         </ul>
     </div>
@@ -60,27 +60,15 @@
                     hebben. Gezien het feit dat wij alleen haar in zijn puurste vorm verkopen wordt het haar niet
                     geclassificeerd in grades.</p>
                 <ul class="actions">
-                    <li><a href="#" class="button">Over ons</a></li>
+                    <li><a href="about.html" class="button">Over ons</a></li>
                 </ul>
             </div>
         </li>
         <li>
             <div class="content">
                 <span class="icon major fa-group"></span>
-                <h3 class="major">Categories</h3>
-                <p>Short description of the different categories? idk. Filler text lorem ipsum dolor seagitis mauris
-                    henderit feugiat elementum arcu vulputate turpis fauciubs lorem ipsum dolor sit amet. Etiam finibus
-                    pharetra purus, imperdiet sagittis mauris hendrerit feugiat ante elementum amet arcu. Maecenas
-                    vulputate turpis faucibus. Etiam finibus
-                    pharetra purus, imperdiet sagittis mauris hendrerit feugiat ante elementum amet arcu. Maecenas
-                    vulputate turpis faucibus.
-                    <!--around india for days. Visiting temples and shops where the hair is manufactured. We tested the hair-->
-                    <!--in multiple ways to get to know the quality of the hair. is manufactured. We tested the hair in-->
-                    <!--multiple ways to know the quality of the hair. After the best places where found that sell the best-->
-                    <!--qualuity hair on the market. Every bundle was hand picked.-->
-
-                    <!--We select every single bundle we sell and travel to get it here. To make sure this hair is pure from-->
-                    <!--the source. </p>-->
+                <h3 class="major">Categorieën</h3>
+                <p>Short description of the different categories?
                 <ul class="actions">
                     <li><a href="#" class="button">Details</a></li>
                     <li><a href="#" class="button">Details</a></li>
@@ -89,28 +77,6 @@
                 </ul>
             </div>
         </li>
-        <!--<li>-->
-        <!--<div class="content">-->
-        <!--<span class="icon major fa-files-o"></span>-->
-        <!--<h3 class="major">Elementum Amet</h3>-->
-        <!--<p>Etiam finibus pharetra purus, imperdiet sagittis mauris hendrerit feugiat ante elementum amet arcu.-->
-        <!--Maecenas vulputate turpis faucibus lorem ipsum dolor sit amet.</p>-->
-        <!--<ul class="actions">-->
-        <!--<li><a href="#" class="button">Details</a></li>-->
-        <!--</ul>-->
-        <!--</div>-->
-        <!--</li>-->
-        <!--<li>-->
-        <!--<div class="content">-->
-        <!--<span class="icon major fa-paper-plane-o"></span>-->
-        <!--<h3 class="major">Volutpat Purus</h3>-->
-        <!--<p>Etiam finibus pharetra purus, imperdiet sagittis mauris hendrerit feugiat ante elementum amet arcu.-->
-        <!--Maecenas vulputate turpis faucibus.</p>-->
-        <!--<ul class="actions">-->
-        <!--<li><a href="#" class="button">Details</a></li>-->
-        <!--</ul>-->
-        <!--</div>-->
-        <!--</li>-->
     </ul>
 </section>
 
@@ -157,18 +123,19 @@
 </section>
 
 <div id="footer"></div>
-
 <!-- Scripts -->
 <script src="assets/js/jquery.min.js"></script>
+<script>
+    $("#navbar").load("imports/navbar.html");
+    $("#footer").load("imports/footer.html");
+</script>
+
 <script src="assets/js/jquery.scrolly.min.js"></script>
 <script src="assets/js/skel.min.js"></script>
 <script src="assets/js/util.js"></script>
 <!--[if lte IE 8]>
 <script src="assets/js/ie/respond.min.js"></script><![endif]-->
 <script src="assets/js/main.js"></script>
-<script>
-    $("#header").load("imports/header.html");
-    $("#footer").load("imports/footer.html");
-</script>
+
 </body>
 </html>
